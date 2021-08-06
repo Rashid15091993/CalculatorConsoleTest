@@ -7,9 +7,10 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
+        System.out.print("Введите число Арабское/Римское от 1 до 10" + "\n");
         Scanner reader = new Scanner(System.in);
-        System.out.print("Input name: ");
-        ArabicNumeric num = new ArabicNumeric(reader);
-        //RomanNumeric roman = new RomanNumeric(reader);
+        System.out.print("Пример ввод 2 + 2/I + II: ");
+        //ArabicNumeric num = new ArabicNumeric(reader);
+        RomanNumeric roman = new RomanNumeric(reader);
     }
 }

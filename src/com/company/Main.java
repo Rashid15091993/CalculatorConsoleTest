@@ -10,7 +10,9 @@ public class Main {
         System.out.print("Введите число Арабское/Римское от 1 до 10" + "\n");
         Scanner reader = new Scanner(System.in);
         System.out.print("Пример ввод 2 + 2/I + II: ");
-        //ArabicNumeric num = new ArabicNumeric(reader);
-        RomanNumeric roman = new RomanNumeric(reader);
+        //ArabicNumeric arabicNumeric = new ArabicNumeric(reader);
+        RomanNumeric romanNumeric = new RomanNumeric(reader);
+
+
     }
 }

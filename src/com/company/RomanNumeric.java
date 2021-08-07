@@ -59,7 +59,16 @@ public class RomanNumeric {
                 }
 
         }
-        System.out.println(toRomanNumber(result));
+        if (result >= 0) {
+            System.out.println(toRomanNumber(result));
+        }
+        else {
+            try {
+                throw new Exception("в римской системе нет отрицательных чисел");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 

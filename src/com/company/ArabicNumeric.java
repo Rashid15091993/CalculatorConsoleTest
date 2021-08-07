@@ -6,12 +6,19 @@ public class ArabicNumeric {
     int result;
     public  ArabicNumeric(Scanner reader) {
 
-        String[]lineList =  reader.nextLine().split(" ");
+        String[] lineList = reader.nextLine().split(" ");
+        if (lineList.length > 3) {
+            try {
+                throw new Exception("формат математической операции не удовлетворяет заданию - два операнда и один");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
 
-        if (lineList.length > 1) {
-            int num1 = Integer.parseInt(lineList[0]);
-            int num2 = Integer.parseInt(lineList[2]);
-            String operator = lineList[1];
+            if (lineList.length > 1) {
+                int num1 = Integer.parseInt(lineList[0]);
+                int num2 = Integer.parseInt(lineList[2]);
+                String operator = lineList[1];
 
 
                 switch (operator) {
@@ -36,16 +43,19 @@ public class ArabicNumeric {
 
                 }
 
-        }
-        else {
-            try {
-                throw new Exception(" строка не является математической операцией");
-            } catch (Exception e) {
-                e.printStackTrace();
+            } else {
+                try {
+                    throw new Exception(" строка не является математической операцией");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+
             }
 
-        }
-        System.out.println(result);
+            System.out.println(result);
 
+
+        }
     }
 }
